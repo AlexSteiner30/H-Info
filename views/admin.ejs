@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | <%= user.userName %></title>
+</head>
+<body>
+    <form method="get" action="/post"><button>Add Post</button></form>
+
+    <% posts.forEach(function(post) { %>
+        <div style="float: left; margin-right: 80px; margin-top: 50px; background-color:lightgray; width: 300px; height: 500px;">
+            <h1><%= post.title %></h1>
+            <h2><%= post.subtitle %></h2>
+            <img style="width: 300px; height: auto" src="<%= post.firstImage %>">
+            <h3><%= post.description %></h3>
+        </div>
+     <% }); %>
+    
+</body>
+</html>

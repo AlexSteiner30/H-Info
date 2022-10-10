@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Add post</title>
+</head>
+<body>
+    <form method="post" action="/post">
+        <h2>Add Post Form</h2>
+
+        <p>Title</p>
+        <input required name="title">
+
+        <p>Subtitle</p>
+        <input name="subtitle">
+
+        <p>Category</p>
+        <select name="category">
+            <option>Clubs</option>
+            <option>This Week</option>
+            <option>Last Week</option>
+            <option>Lunch</option>
+            <option>Weather</option>
+            <option>News and Events</option>
+            <option>Promos</option>
+        </select>
+
+        <p>Description</p>
+        <textarea required name="description"></textarea>
+
+        <p>First Image Link</p>
+        <textarea required name="image"></textarea>
+
+        <p>Pinned</p>
+        <input type="checkbox" name="pinned">
+
+        <p>Check Out</p>
+        <input type="checkbox" name="checkOut">
+
+        <br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
