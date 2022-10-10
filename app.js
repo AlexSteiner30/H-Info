@@ -644,7 +644,7 @@ async function LoadUsers()
     });
 }
 
-app.listen(port=8080,async function(){
+app.listen(port=process.env.PORT || 3000,async function(){
     console.log("\nServer is running on port 8080");
 
     console.log("\nLoading all posts...");
@@ -656,6 +656,6 @@ app.listen(port=8080,async function(){
     console.log("Loaded all the users");
 
     console.log("\nStarting the bot...");
-    await bot.Run();
+    //await bot.Run();
     console.log("Bot is running");
 });
