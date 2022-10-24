@@ -126,7 +126,7 @@ app.post("/search", async function(req, res){
     });
 });
 
-app.get("/club", async function(req, res){
+app.get("/clubs", async function(req, res){
     let allClubsPost = post.collection.find({ argument : "Clubs" }).sort({_id : -1});
     let allClubsPostArr = [];
 
