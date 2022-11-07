@@ -434,13 +434,13 @@ async function LoadPosts()
     });
 
     await thisWeek.forEach(post =>{
-        app.get(`/this-week/${post._id}`, function(req, res){
+        app.get(`/this week/${post._id}`, function(req, res){
             res.render("single-post", {post : post});
         });
     });
 
     await lastWeek.forEach(post =>{
-        app.get(`/last-week/${post._id}`, function(req, res){
+        app.get(`/last week/${post._id}`, function(req, res){
             res.render("single-post", {post : post});
         });
     });
