@@ -141,7 +141,7 @@ app.get("/clubs", async function(req, res){
 });
 
 app.get("/this-week", async function(req, res){
-    let allThisWeekPosts = post.collection.find({ argument : "ThisWeek" }).sort({_id : -1});
+    let allThisWeekPosts = post.collection.find({ argument : "This-Week" }).sort({_id : -1});
     let allThisWeekPostArr = [];
 
     await allThisWeekPosts.forEach(element =>{
@@ -155,7 +155,7 @@ app.get("/this-week", async function(req, res){
 });
 
 app.get("/last-week", async function(req, res){
-    let allLastWeekPosts = post.collection.find({ argument : "LastWeek" }).sort({_id : -1});
+    let allLastWeekPosts = post.collection.find({ argument : "Last-Week" }).sort({_id : -1});
     let allLastWeekPostsArr = [];
 
     await allLastWeekPosts.forEach(element =>{
@@ -440,7 +440,7 @@ async function LoadPosts()
     });
 
     await lastWeek.forEach(post =>{
-        app.get(`/lastweek/${post._id}`, function(req, res){
+        app.get(`/last-week/${post._id}`, function(req, res){
             res.render("single-post", {post : post});
         });
     });
