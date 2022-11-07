@@ -140,7 +140,7 @@ app.get("/clubs", async function(req, res){
     });
 });
 
-app.get("/thisweek", async function(req, res){
+app.get("/this-week", async function(req, res){
     let allThisWeekPosts = post.collection.find({ argument : "ThisWeek" }).sort({_id : -1});
     let allThisWeekPostArr = [];
 
