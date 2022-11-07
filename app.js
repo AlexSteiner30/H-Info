@@ -149,7 +149,7 @@ app.get("/this-week", async function(req, res){
     });
 
     res.render("category", {
-        category : "This Week",
+        category : "This-Week",
         posts : allThisWeekPostArr
     });
 });
