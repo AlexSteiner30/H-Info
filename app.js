@@ -452,7 +452,7 @@ async function LoadPosts()
     });
 
     await weather.forEach(post =>{
-        app.get(`/myps/${post._id}`, function(req, res){
+        app.get(`/weather/${post._id}`, function(req, res){
             res.render("single-post", {post : post});
         });
     });
@@ -462,7 +462,6 @@ async function LoadPosts()
             res.render("single-post", {post : post});
         });
     });
-
 }
 
 // Have a lot of work to do here
