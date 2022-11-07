@@ -515,7 +515,7 @@ async function LoadAllPostsAdmin()
     });
 
     await thisWeek.forEach(post =>{
-        app.get(`/this-week/${post._id}/edit`, async function(req, res){
+        app.get(`/this week/${post._id}/edit`, async function(req, res){
             if (req.session.userName && req.session.psw)
             {
                 res.render("edit", {post : post});
@@ -585,14 +585,14 @@ async function LoadAllPostsAdmin()
             }
         });
 
-        app.post(`/this-week/${post._id}/edit`, function(req, res){
+        app.post(`/this week/${post._id}/edit`, function(req, res){
 
             res.render("/admin");
         });
     });
 
     await lastWeek.forEach(post =>{
-        app.get(`/last-week/${post._id}`, function(req, res){
+        app.get(`/last week/${post._id}`, function(req, res){
             res.render("single-post", {post : post});
         });
     });
@@ -605,12 +605,6 @@ async function LoadAllPostsAdmin()
 
     await weather.forEach(post =>{
         app.get(`/myps/${post._id}`, function(req, res){
-            res.render("single-post", {post : post});
-        });
-    });
-
-    await lunch.forEach(post =>{
-        app.get(`/lunch/${post._id}`, function(req, res){
             res.render("single-post", {post : post});
         });
     });
